@@ -169,7 +169,7 @@ def words(script):
 # Homebrew splitter train/test
 def train_test(x,size=0.7,boot=False):
     r = range(len(x))
-    train = np.random.choice(r,size= int(len(x)*size),replace=boot)
+    train = sorted(np.random.choice(r,size= int(len(x)*size),replace=boot))
     test = []
     for i in r:
         if i not in train:
