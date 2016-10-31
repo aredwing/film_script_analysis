@@ -1,0 +1,26 @@
+Hi, i’m Luis Castro, I’m an electronics bachelor and energy master from Tec de Monterrey, Mexico.
+
+I’m passionate about data science, about the impact it has and will continue to have in our society and our world. I am also very fond of arts, and that is the reason my project proposal for the Data Incubator is a Film Script analyzer.
+
+The Film Script analyzer is envisioned to be a an accurate predictive tool to assign a score and relevant characteristics to a film script by using statistical inference, machine learning and natural language processing.
+
+This application will help producers and directors to have a quick overview of the quality of the many scripts they have to read, providing a numerical benchmark for them.
+
+It will also help both professional and amateur writers to understand their script through a different perspective, providing relevant statistics and features about their script. It will show similarities with other works, shared characteristics and areas of improvement. 
+
+The model draws primarily from publicly available film scripts, which were scrapped from the web, it uses the IMDB API to extract relevant meta data about the script. 
+
+
+The script is then analyzed with natural language processing tools, extracting relevant statistics from it. 
+
+
+Additionally the script is also sent to IBM Watson’s API. It returns a set of numerical features describing the script.
+
+
+With this features it completes the dataset, and proceeds to analyze. It assigns scores to the features to understand which have the highest impact in the predictions and thus, the public appreciation of the film.
+
+Then, machine learning algorithms like random forest, linear regression, k nearest neighbours among others are evaluated, to see which provide the best cross validated prediction. Their aim is to provide an accurate estimate of the IMDB rating a script would have if made into a movie.
+
+This way, the script potential is unveiled. It can also be used to assess the impact of different actors or directors could have in similar movies.
+
+Thank you very much.
