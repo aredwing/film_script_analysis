@@ -1,0 +1,113 @@
+import itertools as it
+import numpy as np
+
+def diceFun(n=8,m=24,d=6):
+    seq = range(1,d+1)
+    result = []
+    for p in it.product(seq,repeat=n):
+        add = sum(p)
+        if add == m:
+            result.append(reduce(lambda x,y: x*y,p))
+    return np.mean(result),np.std(result)
+
+def diceDif(rep=10000000,n=50,m=150,d=6,s=0):
+    np.random.seed(s)
+    result = []
+    for i in range(rep):
+        z = np.random.choice(range(1,d+1),size=n)
+        if z.sum() == m:
+            r = 1.
+            for j in z:
+                r *= j
+            result.append(r)
+    return np.mean(result),np.std(result)
+
+print diceFun()
+print diceDif()
+
+1859.932954, 855.0698853
+1.861181382e+20, 2.865237654e+20
+
+
+
+
+import pandas as pd
+df = pd.read_csv('all.csv')
+
+#1
+np.median(df['tripduration'])
+
+629.0
+
+#2
+visit = []
+for i in df['bikeid'].unique():
+    visit.append(len((df['start station id'][df['bikeid']==i]+df['end station id'][df['bikeid']==i]).unique()))
+np.std(visit)
+
+138.0316068
+
+#3
+dur = []
+for i in df['month'].unique():
+    dur.append(np.mean(df['tripduration'][df['month']==i]))
+max(dur)-min(dur)
+
+430.5702959
+
+#4
+l = float(df.shape[0])
+(sum(df['tripduration'][df['usertype']=='Subscriber']>2700)+sum(df['tripduration'][df['usertype']=='Customer']>1800))/l
+
+0.038106780
+
+#5
+index = df['start station id']==df['end station id']
+sum(index)/l
+
+0.022358391
+
+#6
+from geopy.distance import great_circle as gc
+temp = df[['start station latitude',
+           'start station longitude',
+           'end station latitude',
+           'end station longitude']][~index].values
+dist = []
+for i in temp:
+    dist.append(gc((i[0],i[1]),(i[2],i[3])).meters)
+
+np.mean(dist)/1000.
+
+1.760148299
+
+#7
+strH = []
+
+for i in df[['starttime']].values:
+    strH.append(int(i[0].split()[1].split(':')[0]))
+
+df['hours'] = strH
+
+group  = df[['hours','start station id']].groupby('hours').count()
+group  = group/group.sum()
+groups = df[['hours','start station id','month']].groupby(['start station id','hours']).count()
+sep = []
+for i in groups.index:
+    sep.append([i,list(groups.ix[i].values/float(sum(groups.ix[i[0]].values))/group.ix[i[1]])[0]])
+pd.DataFrame(sep).max()
+
+11.42168404
+
+#8
+count = [0.,0.]
+short = df[['bikeid','end station id','start station id']]
+
+for i in short['bikeid'].unique():
+    temp = short[short['bikeid']==i]
+    for i in range(temp.shape[0]-1):
+        if temp['end station id'].iloc[i]!=temp['start station id'].iloc[i+1]:
+            count[1] += 1.
+        count[0] += 1.
+
+0.132672547

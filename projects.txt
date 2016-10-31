@@ -1,0 +1,52 @@
+Chicago Crime Forecast
+- Presentation screen
+- Map screen
+- Explanation screen
+- Model and plots
+
+Data Work
+- upload resume
+- scrapes resume key words
+- predicts salary
+- 9.1 GB of data
+- Job title definition
+- naive bayes
+- Graphic of compensation, cross validated model
+
+Philadelphia Bike data set (one used for the project)
+- 
+
+review ranker
+- words used
+- select the words
+- sentiment analisis
+
+citation explorer
+- node graphs
+
+
+twitter api presidentials analysis
+
+run planner uses information weather and biometrics
+
+optimizing boston’s foodhealth inspections
+
+trees over houses
+
+https://www.youtube.com/watch?v=b2t3tDtOkic&index=11&list=PLOE4k9MRzZanWmZ7MBrJFi7ZekYmVqEIV
+
+#fly smart
+
+recommendation system movies
+singular value decomposition
+moviesxusers = 
+cosine similarity
+
+taxis 
+
+bitcoin prediction
+
+yelp food sentiment analysis
+
+medicie 
+
