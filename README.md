@@ -14,6 +14,7 @@ These are the files for the Project proposal at the Data Incubator, they consist
 - [rs.py](https://github.com/luisecastro/dataInc/blob/master/rs.py): Function for specific plots.
 - [Data Mining](https://github.com/luisecastro/dataInc/blob/master/stuff/data_mining.ipynb) Data mining section sent as part of the proposal for the semifinal.
 - [Prediction](https://github.com/luisecastro/dataInc/blob/master/stuff/prediction.ipynb) Supervised learning section sent as part of the proposal for the semifinal.
+- [Presentation](https://github.com/luisecastro/dataInc/blob/master/script_analysis.pdf) Presentation for the Data Incubator Final.
 
 Additionaly there are 5 folders:
 - data: contains the current dataset used, along json files from the api's.
