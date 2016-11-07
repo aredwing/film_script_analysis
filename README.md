@@ -1,7 +1,21 @@
-# Project proposal at the Data Incubator:
+# Data Incubator Project:
 ## Film Script Analysis Application
 These are the files for the Project proposal at the Data Incubator, they consiste of:
-- [Data Mining section](https://github.com/luisecastro/dataInc/blob/master/data_mining.ipynb): Where with the uses of web scrapping and API connections (IBM Watson and IMDB) we collect and process film scripts
-- [Helper file](https://github.com/luisecastro/dataInc/blob/master/helper.py): The functions used for the project are defined and commented here.
-- [Machine Learning section](https://github.com/luisecastro/dataInc/blob/master/prediction.ipynb): Data is preproceesed, plotted and analyzed, the features are evaluated and the regression models tested.
-- [Project summary](https://github.com/luisecastro/dataInc/blob/master/FILM%20SCRIPT%20ANALYZER.pdf): The description and rationale for the project are found here.
+- [Main Section](https://github.com/luisecastro/dataInc/blob/master/project.ipynb): Jupyter notebook, contains the code used explained step by step. It is the source for the development of the app. 
+    - Webcrawling
+    - Watson API
+    - IMDB API
+    - Summarization
+    - Recommendation
+    - Genre classification
+
+- [Film Script Analyzer](https://github.com/luisecastro/dataInc/blob/master/film_script_analyzer.pdf): An early proposal for the project.
+- [summarization.py](https://github.com/luisecastro/dataInc/blob/master/summarization.py): Code used for summarization of the scripts.
+- [rs.py](https://github.com/luisecastro/dataInc/blob/master/rs.py): Function for specific plots.
+
+Additionaly there are 5 folders:
+- data: contains the current dataset used, along json files from the api's.
+- data_old: previous (smaller) datasets.
+- scrapped: the raw texts of the scripts.
+- scrapped_old: previous scripts.
+- stuff: testing and prototyping code.
