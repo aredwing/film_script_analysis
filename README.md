@@ -22,6 +22,8 @@ These are the files for the Project proposal at the Data Incubator, they consist
 - [Presentation](https://github.com/luisecastro/dataInc/blob/master/script_analysis.pdf) Presentation for the Data Incubator Final.
 
 Additionaly there are 3 folders and 2 files:
-	- data: Contains csv and json files, dataset, preprocessed dataset, simmilarity matrix, and imdb metadata.
-	- images: Images used in the Jupyter notebooks.
-	- scrapped: The raw texts of the scripts.
+- data: Contains csv and json files, dataset, preprocessed dataset, simmilarity matrix, and imdb metadata.
+- images: Images used in the Jupyter notebooks.
+- scrapped: The raw texts of the scripts.
+- rs.py: Used for some plots.
+- summarization.py: Function for the summarization of the text.
