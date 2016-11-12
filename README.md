@@ -20,6 +20,7 @@ These are the files for the Project proposal at the Data Incubator, they consist
 	- Summarize: It filters and selects phrases in the text to return a summary of the script, it also displays relevant IMDB information, and recommended titles.
 - [Classification / Regression](https://github.com/luisecastro/dataInc/blob/master/reg_class.ipynb): Using supervised learning for assigning a genre and/or a score to them: Rhis is done by runing various ML models like KNN, SVM, RF and NN. The algorithms are tuned to deliver the most accurate prediction and a feature selection processes to select the feature with greatest predicting power.
 - [Presentation](https://github.com/luisecastro/dataInc/blob/master/script_analysis.pdf) Presentation for the Data Incubator Final.
+- [Rationale](https://github.com/luisecastro/dataInc/blob/master/film_script_analyzer.pdf) Early explanation of the project.
 
 Additionaly there are 3 folders and 2 files:
 - data: Contains csv and json files, dataset, preprocessed dataset, simmilarity matrix, and imdb metadata.
