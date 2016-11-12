@@ -1,24 +1,27 @@
 # Data Incubator Project:
 ## Film Script Analysis Application
 These are the files for the Project proposal at the Data Incubator, they consiste of:
-- [Main Section](https://github.com/luisecastro/dataInc/blob/master/project.ipynb): Jupyter notebook, contains the code used explained step by step. It is the source for the development of the app. 
-    - Webcrawling
-    - Watson API
-    - IMDB API
-    - Summarization
-    - Recommendation
-    - Genre classification
-
-- [Film Script Analyzer](https://github.com/luisecastro/dataInc/blob/master/film_script_analyzer.pdf): An early proposal for the project.
-- [summarization.py](https://github.com/luisecastro/dataInc/blob/master/summarization.py): Code used for summarization of the scripts.
-- [rs.py](https://github.com/luisecastro/dataInc/blob/master/rs.py): Function for specific plots.
-- [Data Mining](https://github.com/luisecastro/dataInc/blob/master/stuff/data_mining.ipynb) Data mining section sent as part of the proposal for the semifinal.
-- [Prediction](https://github.com/luisecastro/dataInc/blob/master/stuff/prediction.ipynb) Supervised learning section sent as part of the proposal for the semifinal.
+- [Data Collection / Preparation](https://github.com/luisecastro/dataInc/blob/master/data_pre.ipynb): Here is detailed the whole process of data acquisition and preparation.
+ 	- Webcrawling: Automatically fetch all url's of scripts and proceed to download the information from them.
+    - NLP: Analyze raw script text to extract meaningful statistics from it.
+    - Watson API: Submit the scripts to IBM's Watson to receive the personality insights from them.
+    - IMDB API: Request using the name of the films corresponding to the scripts, valuable meta data like Year, Actors, Directors, Genre, etc.
+    - Create a first iteration dataset.
+- [Data Visualization](https://github.com/luisecastro/dataInc/blob/master/data_viz.ipynb): Getting to know the dataset just created, it is approached as follows: 
+	- Description of general statistics like averages, quantiles, standar deviation.
+	- Checks for missing data and outliers.
+	- Preprocesses the numerical data to bring the features to the same ranges.
+	- Early feature priorization with Random Forest feature importances.
+	- Principal Component Analysis and Linear Discriminant Analysis.
+	- Creation of the simmilarity matrix using Cosine Distance.
+- [Recommendation / Summarization](https://github.com/luisecastro/dataInc/blob/master/rec_sum.ipynb):
+	- Levenshtein Distance: For identifying and correcting mistakes in names and strings typed, returns the most similar string contained in the dataset (for film name search).
+	- Recommender: Selects the top matches from a similarity matrix to recommend the most similar scripts.
+	- Summarize: It filters and selects phrases in the text to return a summary of the script, it also displays relevant IMDB information, and recommended titles.
+- [Classification / Regression](https://github.com/luisecastro/dataInc/blob/master/reg_class.ipynb): Using supervised learning for assigning a genre and/or a score to them: Rhis is done by runing various ML models like KNN, SVM, RF and NN. The algorithms are tuned to deliver the most accurate prediction and a feature selection processes to select the feature with greatest predicting power.
 - [Presentation](https://github.com/luisecastro/dataInc/blob/master/script_analysis.pdf) Presentation for the Data Incubator Final.
 
-Additionaly there are 5 folders:
-- data: contains the current dataset used, along json files from the api's.
-- data_old: previous (smaller) datasets.
-- scrapped: the raw texts of the scripts.
-- scrapped_old: previous scripts.
-- stuff: testing and prototyping code.
+Additionaly there are 3 folders and 2 files:
+	- data: Contains csv and json files, dataset, preprocessed dataset, simmilarity matrix, and imdb metadata.
+	- images: Images used in the Jupyter notebooks.
+	- scrapped: The raw texts of the scripts.
