@@ -1,8 +1,7 @@
-# Data Incubator Project:
 ## Film Script Analysis Application
-These are the files for the Project proposal at the Data Incubator, they consist of:
+The files consist of:
 - [Project Proposal](https://github.com/luisecastro/dataInc/blob/master/project_proposal.pdf): Contains a detailed step by step explanation of the process, the main document.
-- [Presentation](https://github.com/luisecastro/dataInc/blob/master/script_analysis.pdf) Presentation for the Data Incubator Final.
+- [Presentation](https://github.com/luisecastro/dataInc/blob/master/script_analysis.pdf) Presentation of the project.
 - [Data Collection / Preparation](https://github.com/luisecastro/dataInc/blob/master/data_pre.ipynb): Here is detailed the whole process of data acquisition and preparation.
  	- Webcrawling: Automatically fetch all url's of scripts and proceed to download the information from them.
     - NLP: Analyze raw script text to extract meaningful statistics from it.
