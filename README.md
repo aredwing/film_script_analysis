@@ -1,7 +1,7 @@
 ## Film Script Analysis
 The files consist of:
 - [Project Proposal](https://github.com/luisecastro/dataInc/blob/master/project_proposal.pdf): Project proposal that contains a detailed step by step explanation of the process (old file).
-- [Presentation](https://github.com/luisecastro/dataInc/blob/master/script_analysis.pdf) Presentation of the project, proposed steps.
+- [Presentation](https://github.com/luisecastro/dataInc/blob/master/script_analysis.pdf) Presentation of the project, proposed steps (old file).
 - [00_webscrapping](https://github.com/luisecastro/film_script_analysis/blob/master/00_webscrapping.ipynb): Scrapping pages and parsing html to text.
 - [01_imdb](https://github.com/luisecastro/film_script_analysis/blob/master/01_imdb.ipynb): Querying omdb API to retrive film meta data.
 - [02_nlp](https://github.com/luisecastro/film_script_analysis/blob/master/02_nlp.ipynb): Use of NLTK library for tokenization, lemmation and text statistics.
