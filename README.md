@@ -1,31 +1,16 @@
-#OLD README FILE, WILL UPDATE SHORTLY
-
-## Film Script Analysis Application
+## Film Script Analysis
 The files consist of:
-- [Project Proposal](https://github.com/luisecastro/dataInc/blob/master/project_proposal.pdf): Contains a detailed step by step explanation of the process, the main document.
-- [Presentation](https://github.com/luisecastro/dataInc/blob/master/script_analysis.pdf) Presentation of the project.
-- [Data Collection / Preparation](https://github.com/luisecastro/dataInc/blob/master/data_pre.ipynb): Here is detailed the whole process of data acquisition and preparation.
- 	- Webcrawling: Automatically fetch all url's of scripts and proceed to download the information from them.
-    - NLP: Analyze raw script text to extract meaningful statistics from it.
-    - Watson API: Submit the scripts to IBM's Watson to receive the personality insights from them.
-    - IMDB API: Request using the name of the films corresponding to the scripts, valuable meta data like Year, Actors, Directors, Genre, etc.
-    - Create a first iteration dataset.
-- [Data Visualization](https://github.com/luisecastro/dataInc/blob/master/data_viz.ipynb): Getting to know the dataset just created, it is approached as follows: 
-	- Description of general statistics like averages, quantiles, standar deviation.
-	- Checks for missing data and outliers.
-	- Preprocesses the numerical data to bring the features to the same ranges.
-	- Early feature priorization with Random Forest feature importances.
-	- Principal Component Analysis and Linear Discriminant Analysis.
-	- Creation of the simmilarity matrix using Cosine Distance.
-- [Recommendation / Summarization](https://github.com/luisecastro/dataInc/blob/master/rec_sum.ipynb):
-	- Levenshtein Distance: For identifying and correcting mistakes in names and strings typed, returns the most similar string contained in the dataset (for film name search).
-	- Recommender: Selects the top matches from a similarity matrix to recommend the most similar scripts.
-	- Summarize: It filters and selects phrases in the text to return a summary of the script, it also displays relevant IMDB information, and recommended titles.
-- [Classification / Regression](https://github.com/luisecastro/dataInc/blob/master/reg_class.ipynb): Using supervised learning for assigning a genre and/or a score to them: Rhis is done by runing various ML models like KNN, SVM, RF and NN. The algorithms are tuned to deliver the most accurate prediction and a feature selection processes to select the feature with greatest predicting power.
-
-Additionaly there are 3 folders and 2 files:
-- data: Contains csv and json files, dataset, preprocessed dataset, simmilarity matrix, and imdb metadata.
-- images: Images used in the Jupyter notebooks.
-- scrapped: The raw texts of the scripts.
-- rs.py: Used for some plots.
-- summarization.py: Function for the summarization of the text.
+- [Project Proposal](https://github.com/luisecastro/dataInc/blob/master/project_proposal.pdf): Project proposal that contains a detailed step by step explanation of the process (old file).
+- [Presentation](https://github.com/luisecastro/dataInc/blob/master/script_analysis.pdf) Presentation of the project, proposed steps.
+- [00_webscrapping](https://github.com/luisecastro/film_script_analysis/blob/master/00_webscrapping.ipynb): Scrapping pages and parsing html to text.
+- [01_imdb](https://github.com/luisecastro/film_script_analysis/blob/master/01_imdb.ipynb): Querying omdb API to retrive film meta data.
+- [02_nlp](https://github.com/luisecastro/film_script_analysis/blob/master/02_nlp.ipynb): Use of NLTK library for tokenization, lemmation and text statistics.
+- [03_watson](https://github.com/luisecastro/film_script_analysis/blob/master/03_watson.ipynb): Watson API interface to perform personality insights on the scripts.
+- [04_cleaning](https://github.com/luisecastro/film_script_analysis/blob/master/04_cleaning.ipynb): Remove NA's, corrupted data, clean and order dataset.
+- [05_preprocessing](https://github.com/luisecastro/film_script_analysis/blob/master/05_preprocessing.ipynb): Scale data to have mean=0 and std = 1, used for learning models.
+- [06_visualization](https://github.com/luisecastro/film_script_analysis/blob/master/06_visualization.ipynb): Visualize relationships among the features of the datasets and clusterings.
+- [07_classification](https://github.com/luisecastro/film_script_analysis/blob/master/07_classification.ipynb): Perform classification of script Genre using predictor features.
+- [08_regression](https://github.com/luisecastro/film_script_analysis/blob/master/08_regression.ipynb): Peform regression of script imdbRating using predictor features.
+- [09_recomendation](https://github.com/luisecastro/film_script_analysis/blob/master/09_recommendation.ipynb): Recommend scripts based on their content and their rating.
+- [10_summarization](https://github.com/luisecastro/film_script_analysis/blob/master/10_summarization.ipynb): Return script summary based on sentence words' frequencies.
+- [11_word2vec](https://github.com/luisecastro/film_script_analysis/blob/master/11_word2vec.ipynb): Create word embedings, word vectors using the whole script corpora, check word relationships.
