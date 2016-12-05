@@ -14,3 +14,6 @@ The files consist of:
 - [09_recomendation](https://github.com/luisecastro/film_script_analysis/blob/master/09_recommendation.ipynb): Recommend scripts based on their content and their rating.
 - [10_summarization](https://github.com/luisecastro/film_script_analysis/blob/master/10_summarization.ipynb): Return script summary based on sentence words' frequencies.
 - [11_word2vec](https://github.com/luisecastro/film_script_analysis/blob/master/11_word2vec.ipynb): Create word embedings, word vectors using the whole script corpora, check word relationships.
+
+- [data](https://github.com/luisecastro/film_script_analysis/tree/master/data): Dataset in csv, Recommendation dictionary and word2vec files.
+- [scripts](https://github.com/luisecastro/film_script_analysis/tree/master/scripts): All the scrapped scripts.
