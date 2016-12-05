@@ -1,3 +1,5 @@
+#OLD README FILE, WILL UPDATE SHORTLY
+
 ## Film Script Analysis Application
 The files consist of:
 - [Project Proposal](https://github.com/luisecastro/dataInc/blob/master/project_proposal.pdf): Contains a detailed step by step explanation of the process, the main document.
